@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://java.sun.com/jsf/html"  
+      xmlns:f="http://java.sun.com/jsf/core"  
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pe="http://primefaces.org/ui/extensions"
+      xmlns:aj="http://www.animatejsf.org/animate"
+      >  
+
+    <h:body>  
+
+        <ui:composition template="/templates/default/main.xhtml">
+            <ui:define name="content">
+                <div class="jumbotron" >
+                    <h:form id="formId">
+                        <h:graphicImage library="default" name="images/animateJSF.png" />
+                        <p class="lead">A thin JSF Library based on animate.css</p>
+                        <p class="lead">Select one of the animation down to animate the jsf form</p>                                             
+                    </h:form>
+                    <aj:animate id="animateId" target="formId" type="#{animateBean.animateType}" />
+                </div> 
+
+                <h:form styleClass="jumbotron" style="overflow-y: scroll; height:250px;">
+                    <p>
+                        <h4>Attention Seekers</h4>                        
+                        <h:commandButton styleClass="btn btn-odd" value="bounce">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('bounce')}">                               
+                            </p:ajax>                      
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="flash">                            
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('flash')}">                               
+                            </p:ajax> 
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="pulse">
+
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('pulse')}">                               
+                            </p:ajax> 
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="rubberBand">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rubberBand')}">                               
+                            </p:ajax>                        
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="shake">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('shake')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="swing">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('swing')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="tada">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('tada')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="wobble">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('wobble')}">                               
+                            </p:ajax>                        
+                        </h:commandButton>
+
+                    </p>
+                    <p>
+                        <h4>Bouncing Entrances</h4>
+                        <h:commandButton styleClass="btn btn-odd" value="bounceIn">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('bounceIn')}">                               
+                            </p:ajax>                        
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="bounceInDown">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('bounceInDown')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="bounceInLeft">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('bounceInLeft')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="bounceInRight">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('bounceInRight')}">                               
+                            </p:ajax>                       
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="bounceInUp">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('bounceInUp')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                    </p>  
+                    <p>
+                        <h4>Bouncing Exits</h4>
+                        <h:commandButton styleClass="btn btn-odd" value="bounceOut">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('bounceOut')}">                               
+                            </p:ajax>                        
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="bounceOutDown">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('bounceOutDown')}">                               
+                            </p:ajax>                        
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="bounceOutLeft">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('bounceOutLeft')}">                               
+                            </p:ajax>                        
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="bounceOutRight">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('bounceOutRight')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="bounceOutUp">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('bounceOutUp')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                    </p>
+
+                    <p>
+                        <h4>Fading Entrances</h4>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeIn">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeIn')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeInDown">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeInDown')}">                               
+                            </p:ajax>                        
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeInDownBig">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeInDownBig')}">                               
+                            </p:ajax>                       
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeInLeft">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeInLeft')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeInLeftBig">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeInLeftBig')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeInRight">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeInRight')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeInRightBig">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeInRightBig')}">                               
+                            </p:ajax>                        
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeInUp">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeInUp')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeInUpBig">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeInUpBig')}">                               
+                            </p:ajax>                        
+                        </h:commandButton>
+                    </p>
+
+                    <p>
+                        <h4>Fading Exits</h4>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeOut">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeOut')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeOutDown">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeOutDown')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeOutDownBig">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeOutDownBig')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeOutLeft">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeOutLeft')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeOutLeftBig">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeOutLeftBig')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeOutRight">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeOutRight')}">                               
+                            </p:ajax>                        
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeOutRightBig">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeOutRightBig')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeOutUp">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeOutUp')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="fadeOutUpBig">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('fadeOutUpBig')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                    </p>
+
+                    <p>
+                        <h4>Flippers</h4>
+                        <h:commandButton styleClass="btn btn-odd" value="flip">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('flip')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="flipInX">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('flipInX')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="flipInY">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('flipInY')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="flipOutX">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('flipOutX')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="flipOutY">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('flipOutY')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>                         
+                    </p>
+
+                    <p>
+                        <h4>Lightspeed</h4>
+                        <h:commandButton styleClass="btn btn-odd" value="lightSpeedIn">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('lightSpeedIn')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="lightSpeedOut">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('lightSpeedOut')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>                                               
+                    </p>
+
+                    <p>
+                        <h4>Rotating Entrances</h4>
+                        <h:commandButton styleClass="btn btn-odd" value="rotateIn">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rotateIn')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="rotateInDownLeft">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rotateInDownLeft')}">                               
+                            </p:ajax>                         
+                        </h:commandButton> 
+                        <h:commandButton styleClass="btn btn-odd" value="rotateInDownRight">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rotateInDownRight')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="rotateInUpLeft">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rotateInUpLeft')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="rotateInUpRight">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rotateInUpRight')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                    </p>
+                    <p>
+                        <h4>Rotating Exits</h4>
+                        <h:commandButton styleClass="btn btn-odd" value="rotateOut">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rotateOut')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="rotateOutDownLeft">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rotateOutDownLeft')}">                               
+                            </p:ajax>                         
+                        </h:commandButton> 
+                        <h:commandButton styleClass="btn btn-odd" value="rotateOutDownRight">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rotateOutDownRight')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="rotateOutUpLeft">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rotateOutUpLeft')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="rotateOutUpRight">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rotateOutUpRight')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                    </p>
+
+                    <p>
+                        <h4>Sliders</h4>
+                        <h:commandButton styleClass="btn btn-odd" value="slideInDown">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('slideInDown')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="slideInLeft">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('slideInLeft')}">                               
+                            </p:ajax>                         
+                        </h:commandButton> 
+                        <h:commandButton styleClass="btn btn-odd" value="slideInRight">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('slideInRight')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="slideOutLeft">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('slideOutLeft')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="slideOutRight">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('slideOutRight')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="slideOutUp">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('slideOutUp')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                    </p>
+                    <p>
+                        <h4>Specials</h4>
+                        <h:commandButton styleClass="btn btn-odd" value="hinge">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('hinge')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>
+                        <h:commandButton styleClass="btn btn-odd" value="rollIn">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rollIn')}">                               
+                            </p:ajax>                         
+                        </h:commandButton> 
+                        <h:commandButton styleClass="btn btn-odd" value="rollOut">
+                            <p:ajax update=":animateId" listener="#{animateBean.setAnimateType('rollOut')}">                               
+                            </p:ajax>                         
+                        </h:commandButton>                        
+                    </p>
+
+                </h:form>    
+                <div class="jumbotron noalighn">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#maven" data-toggle="tab">Installation</a></li>
+                        <li><a href="#namespace" data-toggle="tab">Namespace</a></li>  
+                        <li><a href="#tagUse" data-toggle="tab">Usage</a></li>                        
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="maven">
+                            <script src="https://gist.github.com/hatemalimam/2fe9f090c9e4559972c1.js"></script>
+                            <div class='well'>Or you can always include the <a href="https://oss.sonatype.org/content/repositories/releases/org/animatejsf/animatejsf/1.0/animatejsf-1.0.jar">jar file</a></div>
+                        </div>
+                         <div class="tab-pane" id="namespace">
+                             <code>xmlns:aj="http://www.animatejsf.org/animate"</code>
+                        </div>
+                        <div class="tab-pane" id="tagUse">
+                            <script src="https://gist.github.com/hatemalimam/be62385b73431198fc13.js"></script>
+                        </div>                        
+                    </div>                                       
+                </div>
+            </ui:define>
+        </ui:composition>        
+
+    </h:body>  
+</html>  
